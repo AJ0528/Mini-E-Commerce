@@ -62,7 +62,7 @@ export const storeProducts = [
   {
     id: 6,
     title: "Microsoft Surface Laptop 2-Red",
-    img: "img/product-6.png",
+    img: "img/product-6.jpeg",
     price: 17,
     company: "Microsoft",
     info:
@@ -74,7 +74,7 @@ export const storeProducts = [
   {
     id: 7,
     title: "Dell XPS 15 2-in-1",
-    img: "img/product-7.png",
+    img: "img/product-7.jpeg",
     price: 30,
     company: "DELL",
     info:
