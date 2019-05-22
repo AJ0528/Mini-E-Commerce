@@ -14,8 +14,13 @@ export default class Product extends Component {
       <Link to="/details">
         <img src={img} alt="product" className="card-img-top"></img>
       </Link>
-      <button className="cart-btn"disabled={inCart ? true : false} onClick={()=>{value.addToCart(id);
-      }}
+
+      <button className="cart-btn" 
+      disabled={inCart ? true : false}
+       onClick={()=>{
+         value.addToCart(id);
+         value.OpenModal(id);
+       }}
       >
       {inCart?(
       <p className="text-capitalize md-0" disabled>
@@ -41,7 +46,7 @@ export default class Product extends Component {
   }
 }
 // eslint-disable-next-line react/no-typos
-Product.PropTypes = {
+Product.propTypes = {
     product:PropTypes.shape({
     id:PropTypes.number,
     img:PropTypes.string,
