@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../Context";
-
+import PropTypes from "prop-types";
 export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
@@ -38,6 +38,20 @@ export default class Product extends Component {
     );
   }
 }
+// eslint-disable-next-line react/no-typos
+Product.PropTypes = {
+    product:PropTypes.shape({
+    id:PropTypes.number,
+    img:PropTypes.string,
+    title:PropTypes.string,
+    price:PropTypes.number,
+    inCart:PropTypes.bool
+  }).isRequired
+};
+
+
+
+
 const ProductWrapper = styled.div`
 .card {
   border-color: transparent;
@@ -82,5 +96,9 @@ const ProductWrapper = styled.div`
 }
 .img-container:hover .cart-btn{
   transform: translate(0,0);
+}
+.cart-btn:hover{
+  color:var(--mainBlue);
+  cursor:pointer;
 }
 `
