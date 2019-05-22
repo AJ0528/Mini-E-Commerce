@@ -5,8 +5,6 @@ const ProductContext = React.createContext();
 //Provider
 //Consumer
 
-
-
 class ProductProvider extends Component {
     state = {
         products:[],
@@ -28,8 +26,8 @@ class ProductProvider extends Component {
     handleDetail = () => {
         console.log("hello from detail");
     }
-    addToCart= () => {
-        console.log("hello from addtocart");
+    addToCart= (id) => {
+        console.log(`hello from add to cart .id is ${id} `);
     }
 
     render() {
